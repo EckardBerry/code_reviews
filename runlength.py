@@ -13,7 +13,7 @@ def stringchallenge(str_arr):
     return empty_string
 """
 
-"""
+
 def stringchallenge(str_arr):
     char_list = list(str_arr)
     char_list = list(dict.fromkeys(char_list))
@@ -24,4 +24,4 @@ def stringchallenge(str_arr):
     return blanc_string
 
 print(stringchallenge('aabbccddd'))
-"""
+
