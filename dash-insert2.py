@@ -41,3 +41,26 @@ dashinsert2('4546793020300')
 #DashInsertII('454679323220460803010200')
 
 """
+
+
+class IceCreamMachine:
+
+    def __init__(self, ingredients, toppings):
+        self.ingredients = ingredients
+        self.toppings = toppings
+
+    def scoops(self):
+        combos = []
+        empty_list = []
+
+        for ing in self.ingredients:
+            for topping in self.toppings:
+                combination = f'{ing} {topping}'
+                combos.append(combination)
+            empty_list.append(combos)
+
+
+if __name__ == "__main__":
+
+    machine = IceCreamMachine(["vanilla", "chocolate"], ["chocolate sauce"])
+    print(machine.scoops())  # should print[['vanilla', 'chocolate sauce'], ['chocolate', 'chocolate sauce']]

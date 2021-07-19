@@ -96,7 +96,6 @@ for name in list_of_names:
         print(char)
     print('Nested loop finished.')
 print('Outside loop finished.')
-
 """
 
 
@@ -109,7 +108,7 @@ for name in list_of_names:
     for char in name:
         print(char)
         continue
-print('Outside loop finished.')
+#print('Outside loop finished.')
 """
 
 
@@ -127,14 +126,12 @@ print('Outside loop finished.')
 
 """
 # What do we need to do to print the main diagonal of 7, 5, 3?
-list_of_numbers = [9, 5, 1]
-for index in range(3):
-    print(' '*index + str(list_of_numbers[index]))
+list_of_numbers = [7, 5, 3]
 
 
-#    9
-#  5
-#1
+#7
+# 5
+#  3
 """
 
 

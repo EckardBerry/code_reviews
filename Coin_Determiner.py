@@ -20,5 +20,14 @@ def CoinDeterminer(num):
 print(CoinDeterminer(16))
 print(CoinDeterminer(55))
 """
+import math
+def find_roots(a, b, c):
+    sqrt_arg = b**2 - 4*a*c
+    two_a = 2*a
+    if sqrt_arg >= 0:
+        x_1 = (-b + math.sqrt(sqrt_arg))/two_a
+        x_2 = (-b - math.sqrt(sqrt_arg))/two_a
+        return x_1, x_2
+    return -b/two_a
 
-
+print(find_roots(2, 10, 8))
