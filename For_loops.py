@@ -41,7 +41,7 @@ for name in list_of_names:
 
 """
 # What will this code do?
-list_of_names = ['Thapelo', 'Thando']
+list_of_names = ['Thapelo', 'Thando', 'Eckard']
 for name in list_of_names:
     for character in name:
         print(character)
@@ -54,7 +54,7 @@ for name in list_of_names:
 
 """
 # What will this code do?
-list_of_names = ['Thapelo', 'Thando']
+list_of_names = ['Thapelo', 'Thando', 'Eckard']
 for name in list_of_names:
     for character in name:
         print(character)
@@ -100,26 +100,42 @@ print('Outside loop finished.')
 
 
 
-
 """
 # What will this code do?
-list_of_names = ['Thapelo']
+list_of_names = ['Thapelo', 'Mahlori']
 for name in list_of_names:
     for char in name:
         print(char)
         continue
-#print('Outside loop finished.')
+    print('Outside loop finished.')
+    continue
 """
 
 
 
 """
 # What will this code do?
-list_of_names = ['Thapelo']
+list_of_names = ['Thapelo', 'Mahlori']
+for name in list_of_names:
+    if 'o' in name:
+        for char in name:
+            continue
+        print("Hello")
+        break
+print('Outside loop finished.')
+"""
+
+
+
+"""
+list_of_names = ['Thapelo', 'Mahlori', 'Eckard']
 for name in list_of_names:
     for char in name:
-        continue
-    break
+        if 'o' in name:
+            for char in name:
+                continue
+            print("Hello")
+            break
 print('Outside loop finished.')
 """
 
@@ -129,10 +145,11 @@ print('Outside loop finished.')
 list_of_numbers = [7, 5, 3]
 
 
-#7
-# 5
 #  3
+# 5
+#7
 """
+
 
 
 
@@ -176,7 +193,6 @@ print(f'x = {x}')
 
 
 
-
 """
 # What will this code do?
 def a_yield_function():
@@ -199,4 +215,36 @@ def a_yield_function():
 
 x = list(a_yield_function())
 """
+
+
+
+"""
+*
+**
+***
+****
+*****
+# One if statement
+# Two for loops
+# triangle(-5)
+*****
+ ****
+  ***
+   **
+    *
+"""
+
+def triangle(value):
+    if value > 0:
+        for i in range(1,6):
+            print(i*'*')
+    else:
+        for i in range(5, 0, -1):
+            print((-value-i)*' ' + i*'*')
+
+
+
+#triangle(5)
+triangle(-5)
+
 
