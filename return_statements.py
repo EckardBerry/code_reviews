@@ -2,6 +2,10 @@
 # What will this do
 def function():
     print("Hello")
+    return 'Hello'
+
+x = function()
+print(f'x = {x}')
 
 """
 
@@ -15,7 +19,6 @@ def something():
 x = something()
 print(f'x = {x}')
 """
-
 
 
 """
@@ -90,6 +93,7 @@ print(f'x = {x}')
 x = something("Hopeful")
 print(f'x = {x}')
 """
+
 
 
 """
@@ -105,6 +109,7 @@ print(f'x = {x}')
 x = something("Hopeful")
 print(f'x = {x}')
 """
+
 
 
 """

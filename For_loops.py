@@ -1,4 +1,28 @@
 """
+# What will this do?
+for i in range(5):
+    print(i)
+"""
+
+
+
+"""
+# What will this do?
+for i in range(1, 10, 2):
+    print(i)
+"""
+
+
+
+"""
+# What will this do?
+for i in range(10, 2, -2):
+    print(i)
+"""
+
+
+
+"""
 # What will this code do?
 list_of_names = ['Thapelo', 'Thando', 'Tsepo', 'Jade', 'Thavha']
 for name in list_of_names:
@@ -10,10 +34,49 @@ for name in list_of_names:
 """
 # What will this code do?
 list_of_names = ['Thapelo', 'Thando', 'Tsepo', 'Jade', 'Thavha']
+for name in range(len(list_of_names)):
+    print(name)
+"""
+
+
+
+"""
+# What will this code do?
+list_of_names = ['Thapelo', 'Thando', 'Tsepo', 'Jade', 'Thavha']
+for name in range(len(list_of_names), 10, 1):
+    print(name)
+"""
+
+
+
+"""
+# What will this code do?
+list_of_names = ['Thapelo', 'Thando', 'Tsepo', 'Jade', 'Thavha']
+for name in range(len(list_of_names)):
+    print(list_of_names[name])
+"""
+
+
+
+
+"""
+# What will this code do?
+list_of_names = ['Thapelo', 'Thando', 'Tsepo', 'Jade', 'Thavha', 'Jason']
+for name in range(len(list_of_names[0:3])):
+    print(name)
+"""
+
+
+
+
+"""
+# What will this code do?
+list_of_names = ['Thapelo', 'Thando', 'Tsepo', 'Jade', 'Thavha']
 for name in list_of_names:
     for character in name:
         print(character)
 """
+
 
 
 
@@ -27,6 +90,7 @@ for name in list_of_names:
 
 
 
+
 """
 # What will this code do?
 list_of_names = ['Thapelo', 'Thando']
@@ -36,6 +100,7 @@ for name in list_of_names:
         if character == 'p':
             break
 """
+
 
 
 
@@ -61,7 +126,7 @@ for name in list_of_names:
         if character == 'p':
             break
     break
-"""
+#"""
 
 
 
@@ -87,10 +152,9 @@ print("Finished")
 
 
 
-
 """
 # What will this code do?
-list_of_names = ['Thapelo']
+list_of_names = ['Thapelo', 'Eckard']
 for name in list_of_names:
     for char in name:
         print(char)
@@ -140,15 +204,21 @@ print('Outside loop finished.')
 """
 
 
+
+
 """
 # What do we need to do to print the main diagonal of 7, 5, 3?
-list_of_numbers = [7, 5, 3]
+my_list = [9, 5, 1]
+#[0][0] = 7
+#[1][1] = 5
+#[2][2] = 3
 
-
-#  3
+#  9
 # 5
-#7
+#1
 """
+
+
 
 
 
@@ -233,18 +303,3 @@ x = list(a_yield_function())
    **
     *
 """
-
-def triangle(value):
-    if value > 0:
-        for i in range(1,6):
-            print(i*'*')
-    else:
-        for i in range(5, 0, -1):
-            print((-value-i)*' ' + i*'*')
-
-
-
-#triangle(5)
-triangle(-5)
-
-
