@@ -8,7 +8,54 @@ for i in range(5):
 
 """
 # What will this do?
-for i in range(1, 10, 2):
+names = ['a', 'b', 'c']
+for index in range(len(names)):
+    print(index)
+"""
+
+
+
+
+"""
+# What will this do?
+names = ['a', 'b', 'c']
+for j in range(len(names)):
+    print(names[j])
+"""
+
+
+
+
+"""
+# What will this do?
+names = ['a', 'b', 'c']
+for index in range(len(names)):
+    print(index)
+    print(names[index])
+"""
+
+
+
+
+
+"""
+# What will this do?
+names = ['a', 'b', 'c']
+for index in range(len(names)):
+    print(index)
+    if names[index] == 'b':
+        print(index)
+    else:
+        print(names[index])
+"""
+
+
+
+
+
+"""
+# What will this do?
+for i in range(10, 4, -1):
     print(i)
 """
 
@@ -18,7 +65,13 @@ for i in range(1, 10, 2):
 # What will this do?
 for i in range(10, 2, -2):
     print(i)
+    if i == 4:
+        for j in range(5):
+            continue
+        break
+    break
 """
+
 
 
 
@@ -27,7 +80,14 @@ for i in range(10, 2, -2):
 list_of_names = ['Thapelo', 'Thando', 'Tsepo', 'Jade', 'Thavha']
 for name in list_of_names:
     print(name)
+    if name == 'Tsepo':
+        for char in name:
+            print(char)
+            break
+    print(name)
+    break
 """
+
 
 
 
@@ -40,12 +100,14 @@ for name in range(len(list_of_names)):
 
 
 
+
 """
 # What will this code do?
 list_of_names = ['Thapelo', 'Thando', 'Tsepo', 'Jade', 'Thavha']
 for name in range(len(list_of_names), 10, 1):
     print(name)
 """
+
 
 
 
@@ -93,12 +155,32 @@ for name in list_of_names:
 
 """
 # What will this code do?
-list_of_names = ['Thapelo', 'Thando']
-for name in list_of_names:
-    for character in name:
-        print(character)
-        if character == 'p':
-            break
+list_of_names = ['Thapelo', 'Thando', 'Hero', 'Zero']
+for i in range(len(list_of_names)):
+    if i == 1:
+        print(list_of_names[i])
+    else:
+        continue
+    
+    for j in range(len(list_of_names[i])):
+        print(list_of_names[i-1])
+"""
+
+
+
+
+"""
+# What will this do?
+for k in range(10, 5, -1):
+    if k == 8:
+        print(k+1)
+    else:
+        for i in range(4):
+            if i == 2:
+                print(i+1)
+            else:
+                continue
+    break
 """
 
 
@@ -117,6 +199,7 @@ for name in list_of_names:
 
 
 
+
 """
 # What will this code do?
 list_of_names = ['Thapelo', 'Thando', 'Eckard']
@@ -126,7 +209,8 @@ for name in list_of_names:
         if character == 'p':
             break
     break
-#"""
+"""
+
 
 
 
@@ -142,6 +226,7 @@ for name in list_of_names:
 
 
 
+
 """
 # What will this code do?
 list_of_names = ['Thapelo', 'Thando']
@@ -149,6 +234,7 @@ for name in list_of_names:
     print(name)
 print("Finished")
 """
+
 
 
 
@@ -164,6 +250,7 @@ print('Outside loop finished.')
 
 
 
+
 """
 # What will this code do?
 list_of_names = ['Thapelo', 'Mahlori']
@@ -172,8 +259,9 @@ for name in list_of_names:
         print(char)
         continue
     print('Outside loop finished.')
-    continue
+    break
 """
+
 
 
 
@@ -206,17 +294,9 @@ print('Outside loop finished.')
 
 
 
-"""
-# What do we need to do to print the main diagonal of 7, 5, 3?
-my_list = [9, 5, 1]
-#[0][0] = 7
-#[1][1] = 5
-#[2][2] = 3
 
-#  9
-# 5
-#1
-"""
+
+
 
 
 
@@ -224,82 +304,108 @@ my_list = [9, 5, 1]
 
 
 """
-list_of_numbers = [3, 5, 7]
-for index in range(2,-1,-1):
-    print(" " * (len(list_of_numbers) - 1 - index) + str(list_of_numbers[index]))
+While Loops
 """
 
 
-
 """
-# What do we need to do to print the main diagonal of 7, 5, 3?
-list_of_numbers = [9, 5, 1]
-len = len(list_of_numbers)
-for idx_one in range(3):
-    print((len - idx_one)*' ' + str(list_of_numbers[idx_one]))
-
-#print([0][2])
-#print([1][1])
-#print([2][0])
-
-#  9
-# 5
-#1
+# What will this do
+i = 10
+while i > 0:
+    print(i)
+    if i == 5:
+        break
+    else:
+        print(i-1)
+        i -= 1
 """
 
 
 
 
 """
-# What will this code do?
-def a_yield_function():
-    list_of_names = ['Thapelo', 'Thando', 'Eckard']
-    for name in list_of_names:
-        yield name
-
-x = a_yield_function()
-print(f'x = {x}')
+# What will this do
+i = 10
+while i > 0:
+    print(i)
+    if i == 5:
+        continue
+    else:
+        print(i-1)
+        i -= 1
 """
 
 
 
 """
-# What will this code do?
-def a_yield_function():
-    list_of_names = ['Thapelo', 'Thando', 'Eckard']
-    for name in list_of_names:
-        yield name
-
-for x in a_yield_function():
-    print(x)
+# What will this do
+i = 5
+while i > 0:
+    print(i)
+    if i == 2:
+        break
+    i -= 1
 """
 
 
 
 """
-# What will this code do?
-def a_yield_function():
-    range_of_integers = range(1, 20, 2)
-    for number in range_of_integers:
-        yield number*number
-
-x = list(a_yield_function())
+# What will this do
+i = 3
+while i > 0:
+    j = i-1
+    while j > 0 and j != i:
+        print(i)
+        if i == 2:
+            break
+        i -= 1
+    i -= 1
 """
 
 
 
 """
-*
-**
-***
-****
-*****
-# One if statement
-# Two for loops
-# triangle(-5)
-*****
- ****
-  ***
-   **
-    *
+# What will this do
+i = 3
+while i > 0:
+    j = i-1
+    while j > 0 and j != i:
+        print(i)
+        if i == j:
+            continue
+        i -= 1
+    i -= 1
 """
+
+
+
+"""
+# What will this do
+LIST = ['John', 'Jacob', 'sitting']
+i = len(LIST)
+while i != 0:
+    j = len(LIST) - i
+    while j >= 0 and j < i:
+        print(LIST[j])
+        j += 1
+    i -= 1
+"""
+
+
+
+
+"""
+# What will this do
+LIST = ['John', 'Jacob', 'sitting']
+i = len(LIST)
+while i != 0:
+    print(i)
+    j = len(LIST) - i
+    if j == i+1:
+        continue
+    break
+"""
+
+
+
+

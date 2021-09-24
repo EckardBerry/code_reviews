@@ -42,7 +42,7 @@ dashinsert2('4546793020300')
 
 """
 
-
+"""
 class IceCreamMachine:
 
     def __init__(self, ingredients, toppings):
@@ -64,3 +64,13 @@ if __name__ == "__main__":
 
     machine = IceCreamMachine(["vanilla", "chocolate"], ["chocolate sauce"])
     print(machine.scoops())  # should print[['vanilla', 'chocolate sauce'], ['chocolate', 'chocolate sauce']]
+"""
+
+
+
+
+
+abc = ['a', 'b', 'c', 'd', 'e', 'f']
+acf = {1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f'}
+for value in enumerate(acf):
+    print(value[1])

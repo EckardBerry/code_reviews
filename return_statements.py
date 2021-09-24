@@ -1,3 +1,4 @@
+
 """
 # What will this do
 def function():
@@ -6,8 +7,9 @@ def function():
 
 x = function()
 print(f'x = {x}')
-
 """
+
+
 
 
 """
@@ -21,6 +23,7 @@ print(f'x = {x}')
 """
 
 
+
 """
 "What will this do?"
 def something():
@@ -29,6 +32,21 @@ def something():
 x = something()
 print(f'x = {x}')
 """
+
+
+
+
+"""
+"What will this do?"
+def something():
+    print("Hello")
+    return None
+    return 'Blue'
+
+x = something()
+print(f'x = {x}')
+"""
+
 
 
 
@@ -41,58 +59,71 @@ def something():
 
 x = something()
 print(f'x = {x}')
+print(f'x = {x}')
 """
+
 
 
 
 """
 "What will this do?"
-def something():
+def something(parameter):
     print("Hello")
+    return parameter
+
+x = something("Yellow")
+print(f'x = {x}')
+"""
+
+
+
+
+"""
+"What will this do?"
+def something(parameter):
+    print("Hello")
+    return parameter
+
+x = something("Pink")
+x = something("Hopeful")
+print(f'x = {x}')
+"""
+
+
+
+
+"""
+"What will this do?"
+def something(parameter):
+    print("Hello")
+    return parameter
+
+x = something("Your Name")
+print(f'x = {x}')
+x = something("Hopeful")
+print(f'x = {x}')
+"""
+
+
+
+"""
+# What will this do?
+def foo():
+    for i in range(3):
+        print(i)
+        if i == 1:
+            return i
+        else:
+            print('Bye')
     return None
-    return "blue"
 
-x = something()
-print(f'x = {x}')
+x = foo()
 print(f'x = {x}')
 """
 
 
 
-"""
-"What will this do?"
-def something(parameter):
-    print("Hello")
-    return parameter
 
-x = something("Your Name")
-print(f'x = {x}')
-"""
-
-
-"""
-"What will this do?"
-def something(parameter):
-    print("Hello")
-    return parameter
-
-x = something("Your Name")
-x = something("Hopeful")
-print(f'x = {x}')
-"""
-
-
-"""
-"What will this do?"
-def something(parameter):
-    print("Hello")
-    return parameter
-
-x = something("Your Name")
-print(f'x = {x}')
-x = something("Hopeful")
-print(f'x = {x}')
-"""
 
 
 
@@ -122,6 +153,8 @@ def something(parameter):
 x = something("Your Name")
 print(f'x = {x}')
 """
+
+
 
 
 """
@@ -204,6 +237,7 @@ print(f'x = {x}')
 x = third_func('Hello')
 print(f'x = {x}')
 """
+
 
 
 """
