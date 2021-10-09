@@ -1,8 +1,14 @@
 """
 # What will this do?
-for i in range(5):
+for i in 'pink':
     print(i)
 """
+
+def foo():
+    print('Hello')
+
+x = foo()
+print(f'x = {x}')
 
 
 
@@ -37,7 +43,6 @@ for index in range(len(names)):
 
 
 
-
 """
 # What will this do?
 names = ['a', 'b', 'c']
@@ -51,11 +56,9 @@ for index in range(len(names)):
 
 
 
-
-
 """
 # What will this do?
-for i in range(10, 4, -1):
+for i in range(1, 5, 1):
     print(i)
 """
 
@@ -309,6 +312,37 @@ While Loops
 
 
 """
+i = 5
+while i != 10:
+    if i == 8:
+        i+=1
+        continue
+    else:
+        print(i)
+    i+=1
+"""
+
+
+
+"""
+# What will this do
+i = 4
+while i > 0:
+    print(i)
+    if i == 2:
+        while i > 1:
+            print(i)
+            i -= 1
+    else:
+        print(i)
+        i -= 1
+        continue
+"""
+
+
+
+
+"""
 # What will this do
 i = 10
 while i > 0:
@@ -318,21 +352,7 @@ while i > 0:
     else:
         print(i-1)
         i -= 1
-"""
-
-
-
-
-"""
-# What will this do
-i = 10
-while i > 0:
-    print(i)
-    if i == 5:
         continue
-    else:
-        print(i-1)
-        i -= 1
 """
 
 
@@ -343,6 +363,8 @@ i = 5
 while i > 0:
     print(i)
     if i == 2:
+        continue
+    else:
         break
     i -= 1
 """
@@ -379,18 +401,18 @@ while i > 0:
 
 
 
+
 """
 # What will this do
 LIST = ['John', 'Jacob', 'sitting']
 i = len(LIST)
 while i != 0:
-    j = len(LIST) - i
+    j = i - 1
     while j >= 0 and j < i:
         print(LIST[j])
         j += 1
     i -= 1
 """
-
 
 
 
@@ -406,6 +428,27 @@ while i != 0:
     break
 """
 
+
+
+"""
+# What will this do?
+mine = ['Dlamini', 'Mashau', 'Baloyi', 'Berry']
+i = len(mine) - len(mine)
+
+while mine[i] in mine:
+    if i > len(mine):
+        break
+    else:
+        print(mine[i])
+        i += 1
+        if i == len(mine):
+            i += 1
+            while i < 8:
+                print(mine[2])
+                continue
+        else:
+            break
+"""
 
 
 

@@ -1,4 +1,3 @@
-
 """
 # What will this do
 def function():
@@ -124,9 +123,6 @@ print(f'x = {x}')
 
 
 
-
-
-
 """
 "What will this do?"
 def something(parameter):
@@ -153,7 +149,6 @@ def something(parameter):
 x = something("Your Name")
 print(f'x = {x}')
 """
-
 
 
 
