@@ -1,14 +1,8 @@
 """
 # What will this do?
-for i in 'pink':
+for i in 'grey':
     print(i)
 """
-
-def foo():
-    print('Hello')
-
-x = foo()
-print(f'x = {x}')
 
 
 
@@ -18,7 +12,6 @@ names = ['a', 'b', 'c']
 for index in range(len(names)):
     print(index)
 """
-
 
 
 
@@ -297,15 +290,6 @@ print('Outside loop finished.')
 
 
 
-
-
-
-
-
-
-
-
-
 """
 While Loops
 """
@@ -386,6 +370,7 @@ while i > 0:
 
 
 
+
 """
 # What will this do
 i = 3
@@ -449,6 +434,9 @@ while mine[i] in mine:
         else:
             break
 """
+
+
+
 
 
 

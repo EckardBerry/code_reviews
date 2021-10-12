@@ -15,3 +15,14 @@ def palindrome_two(str_arg):
 
 
 print(palindrome_two('Anne, I vote more cars race Rome-to-Vienna'))
+
+
+# Another way
+
+def palindrome(word):
+    reversal_of_word = list(map(lambda x: [word[x] for x in range(len(word)-1, -1, -1)], word))[0]
+    if reversal_of_word == list(word):
+        return True
+    return False
+
+print(palindrome('racecar'))
