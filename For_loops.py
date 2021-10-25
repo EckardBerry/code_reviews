@@ -1,6 +1,6 @@
 """
 # What will this do?
-for i in 'grey':
+for i in range(3):
     print(i)
 """
 
@@ -21,6 +21,7 @@ names = ['a', 'b', 'c']
 for j in range(len(names)):
     print(names[j])
 """
+
 
 
 
@@ -434,6 +435,8 @@ while mine[i] in mine:
         else:
             break
 """
+
+
 
 
 

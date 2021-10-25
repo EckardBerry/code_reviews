@@ -23,6 +23,7 @@ print(f'x = {x}')
 
 
 
+
 """
 "What will this do?"
 def something():
@@ -127,15 +128,17 @@ print(f'x = {x}')
 "What will this do?"
 def something(parameter):
     print("Hello")
-    if parameter == "Your Name":
+    if parameter == "Blue":
         return parameter
-    return "Whats your name?"
+    return "what color?"
 
-x = something("Your Name")
+x = something("Blue")
 print(f'x = {x}')
-x = something("Hopeful")
+x = something("Pink")
 print(f'x = {x}')
 """
+
+
 
 
 
@@ -161,9 +164,10 @@ def something(parameter):
         return x
     return parameter
 
-x = something("Your Name")
+x = something("Yellow")
 print(f'x = {x}')
 """
+
 
 
 
