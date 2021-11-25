@@ -1,5 +1,24 @@
-import requests
-import json
+"""
+# How do *args work
+def foo(*args, **kwargs):
+    print(*args)
+    print(*kwargs)
+
+foo(6, 7, one=1, two=2, three=3, four=4, five=5)
+"""
+
+
+
+"""
+# How do **kwargs work
+def foo(**kwargs):
+    print(kwargs)
+    print(*kwargs)
+
+
+foo(one=1, two=2, three=3)
+"""
+
 
 
 """
@@ -8,7 +27,7 @@ def foo(**kwargs):
     print(kwargs)
 
 header = {'server': '127.0.0.1', 'port': 3306, 'user': 'someone', 'password': 'pass'}
-print(foo(**header))
+foo(**header)
 """
 
 
@@ -64,7 +83,6 @@ print(*nested_lst2[2])
 
 
 
-
 """
 # What will be the effect of the 'zip' functionality?
 nested_lst1 = [[1, 2], ["Venus", "Mars"], [True, False]]
@@ -87,8 +105,8 @@ print(nested_lst2[1]["car"])
 """
 # Get the color of the car in the second list item, do it in two different ways
 nested_lst3 = [{"camera":{"color": "black", "res": 16}, "phone":1}, {"car": {"amount": 1, "year": 2017, "color": "red"}, "van": 0}]
-print(nested_lst3[1]["car"]["color"])
-print(nested_lst3[1].get('car').get('color'))
+#print(nested_lst3[1]["car"]["color"])
+#print(nested_lst3[1].get('car').get('color'))
 """
 
 
@@ -106,6 +124,7 @@ print(*nested_lst4["assets"])
 
 """
 # Get only the details of a place called 'Rutland'
+import requests
 request = requests.get('http://api.zippopotam.us/us/vt/rutland').json()
 print(request)
 for dictionary in request.get('places'):

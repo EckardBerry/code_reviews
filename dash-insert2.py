@@ -19,7 +19,7 @@ def DashInsertII(string):
     print(blank_string)
 '''
 
-"""
+#"""
 def dashinsert2(str_arr):
     print(str_arr)
     blank_string = ''
@@ -36,11 +36,14 @@ def dashinsert2(str_arr):
             blank_string += '-'
     print(blank_string)
 
-dashinsert2('4546793020300')
+dashinsert2('99946')
 #DashInsertII('4546793')
 #DashInsertII('454679323220460803010200')
 
-"""
+#"""
+
+
+
 
 """
 class IceCreamMachine:
@@ -65,12 +68,3 @@ if __name__ == "__main__":
     machine = IceCreamMachine(["vanilla", "chocolate"], ["chocolate sauce"])
     print(machine.scoops())  # should print[['vanilla', 'chocolate sauce'], ['chocolate', 'chocolate sauce']]
 """
-
-
-
-
-
-abc = ['a', 'b', 'c', 'd', 'e', 'f']
-acf = {1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f'}
-for value in enumerate(acf):
-    print(value[1])

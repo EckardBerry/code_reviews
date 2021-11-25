@@ -1,3 +1,4 @@
+
 """
 # What will this do
 def function():
@@ -159,14 +160,15 @@ print(f'x = {x}')
 "What will this do?"
 def something(parameter):
     print("Hello")
-    for x in parameter:
-        print(x)
-        return x
+    for char in parameter:
+        print(char)
+        return char
     return parameter
 
 x = something("Yellow")
 print(f'x = {x}')
 """
+
 
 
 

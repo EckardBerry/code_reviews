@@ -14,3 +14,15 @@ def FibonacciChecker(num):
 print(FibonacciChecker(13))
 """
 
+
+"""
+def StringChallenge(str1, str2):
+    count=0
+    for char in str1:
+        if char in str2:
+            count += 1
+    return True if len(str2) <= count else False
+
+
+print(StringChallenge('coodrebtqqkye', 'coderbyte'))
+"""

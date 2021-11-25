@@ -438,8 +438,3 @@ while mine[i] in mine:
 
 
 
-
-
-
-
-
