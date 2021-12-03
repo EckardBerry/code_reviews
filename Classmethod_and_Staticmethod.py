@@ -201,6 +201,13 @@ class Mom:
     def change_moms_name(cls, name):
         cls.moms_name = name
 
+    @staticmethod
+    def moms_name_change(obj, name):
+        obj.moms_name = name
+
+    def name_change_mom(self, name):
+        self.moms_name = name
+
 
 class Dad:
 
@@ -214,6 +221,7 @@ class Dad:
 class Child(Mom, Dad):
 
     toy = 'Dragon'
+    name = None
 
     def __init__(self, name):
         self.name = name
@@ -226,17 +234,33 @@ class Child(Mom, Dad):
         return f'Child is searching:  {self.toy}.'
 
 
+print('***********NO CHANGES***********')
 Ben = Child('Ben')
+Susan = Child('Susan')
 print(Mom.moms_name)
 print(Ben.moms_name)
-Susan = Child('Susan')
+print(Susan.moms_name)
+print('**********@CLASSMETHOD**********')
 Mom.change_moms_name('Marlene')
 print(Mom.moms_name)
 print(Susan.moms_name)
 print(Ben.moms_name)
-
-
-
+print('**********@STATICMETHOD*********')
+Mom.moms_name_change(Ben, 'Sheila')
+print(Mom.moms_name)
+print(Susan.moms_name)
+print(Ben.moms_name)
+print('**********NORMAL FUNCTION BEFORE CREATING A MOM OBJECT*******')
+Mom.name_change_mom(Ben, 'Daphny')
+print(Mom.moms_name)
+print(Susan.moms_name)
+print(Ben.moms_name)
+print('**********NORMAL FUNCTION AFTER CREATING A MOM OBJECT********')
+mom = Mom()
+print(mom.moms_name)
+mom.name_change_mom('Daphny')
+print(mom.moms_name)
+print(Susan.moms_name)
 
 
 
