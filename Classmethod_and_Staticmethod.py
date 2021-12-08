@@ -1,201 +1,8 @@
-
 """
-class Something:
-
-    car = 'ford'
-    house = 22
-
-    @classmethod
-    def drive(cls, car):
-        cls.car = car
-        return cls
-
-    @staticmethod
-    def driven(cls, car):
-        cls.car = car
-        return cls
-
-    @staticmethod
-    def drone():
-        cls.car = car       # If you did not pass in the class then you also cannot update class variables
-        car = car
-
-    @staticmethod
-    def foo():
-        print('Hello')
-
-classmeth = Something.drive('Ferrari')
-staticmeth = Something.driven(Something(), 'Toyota')
-print(staticmeth.car)
-print(Something.foo())
-"""
-
-
-
-
-"""
-class Person:
-
-    def __init__(self, name, eyes, length):
-        self.name = name
-        self.eyes = eyes
-        self.length = length
-
-    def dunno(self):
-        return 'Inside the function dunno'
-
-
-person = Person('John', 'blue', 'short')
-print(person.length)
-"""
-
-
-
-
-"""
-class Animal:
-
-    def __init__(self, name):
-        self.name = name
-
-    @staticmethod
-    def sound():
-        print("sound...")
-
-    def eat(self):
-        print(f"{self.name} eats")
-
-
-class Dog(Animal):
-    @staticmethod
-    def sound(self):
-        print("Dog barks")
-"""
-
-
-
-
-
-"""
-class Class:
-
-    today = 'Tuesday'
-
-    def func(self):
-        return 'in class called Class'
-
-
-class Man(Class): # See how the class 'Man' inherits from the class 'Class'
-
-    tomorrow = 'Wednesday'
-    fun = super().func()
-
-
-class_object = Class()
-print(Class.func(class_object))
-print(Class.today)  # See how a class attribute is accessed without creating a class object
-
-print('******************')
-man_object = Man()
-print(man_object.tomorrow)
-print(man_object.today)
-print(man_object.func())    # Notice that I don't have to pass a 'self/class object' to func() here
-"""
-
-
-
-
-"""
-class One:
-    def __init__(self, name, surname):
-        self.name=name
-        self.surname=surname
-
-    def foo(self):
-        return 'Hello class One'
-
-
-class Two(One):
-    def __init__(self, name, surname):
-        super().__init__(name, surname)
-        
-one_object = One('John', 'Jameson')
-two_object = Two('Rick', 'James')
-"""
-
-
-
-"""
-class Something:
-
-    car = 'Toyota'
-
-    def foo(self):
-        self.car = 'Ferrari'
-        return self.car
-
-    @staticmethod
-    def without():
-        car = 'Ferrari'
-        return car
-
-    @classmethod
-    def func(cls):
-        cls.car = 'Ford'
-        return cls.car
-
-
-class_object = Something()
-print(class_object.foo())
-print(Something.func())
-"""
-
-
-
-
-"""
-class Mom:
-
-    broom = True
-
-    def cleaning(self, tool):
-        print(f'Mom is doing some cleaning with a {tool}.')
-
-
-class Dad:
-
-    spanner = True
-
-    def fixing(self, tool):
-        print(f'Dad is doing some fixing with a {tool}.')
-
-
-class Child(Mom, Dad):
-
-    toy = True
-
-    def playing(self, toy):
-        print(f'Child is playing with a {toy}.')
-
-    @property
-    def searching(self):
-        return f'Child is searching:  {self.toy}.'
-
-
-child = Child()
-child.playing('truck')
-#child.fixing(Dad(), 'spanner')
-print(child.searching)
-"""
-
-
 class Mom:
 
     broom = True
     moms_name = 'Zelda'
-
-    def cleaning(self, tool):
-        print(f'Mom is doing some cleaning with a {tool}.')
 
     @classmethod
     def change_moms_name(cls, name):
@@ -230,8 +37,12 @@ class Child(Mom, Dad):
         print(f'Child is playing with a {toy}.')
 
     @property
-    def searching(self):
-        return f'Child is searching:  {self.toy}.'
+    def get_toy(self):
+        return self.toy
+
+    @get_toy.setter
+    def get_toy(self, toy):
+        self.toy = toy
 
 
 print('***********NO CHANGES***********')
@@ -264,8 +75,68 @@ print(Susan.moms_name)
 
 
 
+print()
+print()
+print('********GETTERS AND SETTERS****************')
+print(Ben.toy)
+print(Ben.get_toy)
+Ben.set = 'Alien'
+print(Ben.get_toy)
+print(Child.get_toy.setter)
+"""
 
 
 
+"""
+
+class Time:
+
+    def __init__(self, hour, minute):
+        self.hour = hour
+        self.minute = minute
+        
+    def hello(self):
+        print('Hello')
+
+
+class BellClock(Time):
+
+    def __init__(self, hour, minute, name):
+        super().__init__(hour, minute)
+        self.name = name
+        
+    super().hello()
+
+
+class StopWatch(Time, BellClock):
+
+    #def __init__(self, hour, minute, seconds):
+        #Time.__init__(Time, hour, minute)
+        #self.seconds = seconds
+
+print('***********BELLCLOCK OBJECT************')
+clock = BellClock(12, 30, 'Big Ben')
+print(f'{clock.name}, {clock.hour}:{clock.minute}')
+#print('***********STOPWATCH OBJECT************')
+#watch = StopWatch(18, 25, 30)
+#print(f'{watch.hour}:{watch.minute}:{watch.seconds}')
+
+
+"""
+
+class Dog:
+
+    def sound(self, name):
+        print(f'Dog sound is {name}')
+
+
+class Cat(Dog):
+
+    def sound(self, name):
+        Dog.sound(self, name)
+
+
+cat = Dog()
+cat.sound('Stormy')
 
 
